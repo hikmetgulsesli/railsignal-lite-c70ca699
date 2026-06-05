@@ -1,0 +1,20 @@
+[
+  {
+    "screenId": "6b008f0bacc843a5928e0da697025af6",
+    "name": "Gameplay - RailSignal Lite",
+    "type": "game",
+    "description": "Gameplay - RailSignal Lite screen",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "96a8ed1270af473bb413bd6ced8602ed",
+    "name": "Game Settings - RailSignal Lite",
+    "type": "settings",
+    "description": "Game Settings - RailSignal Lite screen",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]

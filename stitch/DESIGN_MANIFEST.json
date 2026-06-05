@@ -1,0 +1,24 @@
+[
+  {
+    "screenId": "6b008f0bacc843a5928e0da697025af6",
+    "title": "Gameplay - RailSignal Lite",
+    "htmlFile": "6b008f0bacc843a5928e0da697025af6.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzZkYzhhOGQ1Nzk2MjQ0ZmVhZTViZTk5MmI2NzJmYjkwEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhMxMjUyMDczOTcxMjI3MTA0NTg1&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/railsignal-lite-c70ca699/stitch/6b008f0bacc843a5928e0da697025af6.html",
+    "surfaceIds": [
+      "SURF_GAMEPLAY"
+    ]
+  },
+  {
+    "screenId": "96a8ed1270af473bb413bd6ced8602ed",
+    "title": "Game Settings - RailSignal Lite",
+    "htmlFile": "96a8ed1270af473bb413bd6ced8602ed.html",
+    "deviceType": "DESKTOP",
+    "htmlUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2I4NzIyNTUzMGU1MTRiYTRhZDdiZDNlZTBlZDM2NmIxEgsSBxCN19Wi9xcYAZIBIwoKcHJvamVjdF9pZBIVQhMxMjUyMDczOTcxMjI3MTA0NTg1&filename=&opi=96797242",
+    "localHtml": "/Users/setrox/projects/railsignal-lite-c70ca699/stitch/96a8ed1270af473bb413bd6ced8602ed.html",
+    "surfaceIds": [
+      "SURF_GAME_SETTINGS"
+    ]
+  }
+]

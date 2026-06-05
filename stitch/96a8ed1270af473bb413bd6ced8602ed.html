@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RailSignal Lite - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#abd600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary-fixed": "#161e00",
+                        "secondary-fixed-dim": "#ffba20",
+                        "primary-container": "#c3f400",
+                        "on-secondary-container": "#6b4b00",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-tint": "#abd600",
+                        "on-secondary": "#412d00",
+                        "primary-fixed": "#c3f400",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#ffdea8",
+                        "tertiary-container": "#ffdad5",
+                        "secondary-container": "#feb700",
+                        "tertiary": "#ffffff",
+                        "on-surface-variant": "#c4c9ac",
+                        "on-primary-container": "#556d00",
+                        "surface-dim": "#131313",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-container": "#ca0a0f",
+                        "outline-variant": "#444933",
+                        "background": "#131313",
+                        "on-error": "#690005",
+                        "secondary": "#ffdb9d",
+                        "tertiary-fixed": "#ffdad5",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#410001",
+                        "inverse-on-surface": "#313030",
+                        "outline": "#8e9379",
+                        "on-secondary-fixed": "#271900",
+                        "on-secondary-fixed-variant": "#5e4200",
+                        "on-background": "#e5e2e1",
+                        "surface-variant": "#353534",
+                        "on-tertiary": "#690003",
+                        "surface-container": "#201f1f",
+                        "error": "#ffb4ab",
+                        "on-primary": "#283500",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "surface-bright": "#393939",
+                        "inverse-primary": "#506600",
+                        "surface-container-highest": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-error-container": "#ffdad6",
+                        "primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#930005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "unit": "4px",
+                        "gutter": "16px",
+                        "grid-cols": "12",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-base": ["Inter"],
+                        "display-lg": ["JetBrains Mono"],
+                        "display-lg-mobile": ["JetBrains Mono"],
+                        "headline-md": ["JetBrains Mono"],
+                        "stats-num": ["JetBrains Mono"],
+                        "label-caps": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-base": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "stats-num": ["20px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>/* Custom styles for sliders and toggles to match industrial theme */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent
+    }
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 24px;
+    width: 12px;
+    background: #abd600;
+    cursor: pointer;
+    border-radius: 0;
+    box-shadow: 0 0 8px rgba(171, 214, 0, 0.4);
+    margin-top: -10px
+    }
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    background: #2a2a2a
+    }
+/* Checkbox as toggle */
+.industrial-toggle {
+    appearance: none;
+    width: 48px;
+    height: 24px;
+    background-color: #2a2a2a;
+    border: 1px solid #444933;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease-in-out
+    }
+.industrial-toggle::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: #8e9379;
+    transition: all 0.2s ease-in-out
+    }
+.industrial-toggle:checked {
+    background-color: rgba(171, 214, 0, 0.2);
+    border-color: #abd600;
+    box-shadow: 0 0 10px rgba(171, 214, 0, 0.2) inset
+    }
+.industrial-toggle:checked::after {
+    left: 26px;
+    background-color: #abd600;
+    box-shadow: 0 0 8px rgba(171, 214, 0, 0.6)
+    }
+/* Glassmorphic border glow */
+.glass-panel {
+    backdrop-filter: blur(12px);
+    background: rgba(18, 18, 18, 0.85);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.1)
+    }
+.scanline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1));
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 50;
+    opacity: 0.3
+    }
+/* Ambient Background for context */
+body {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCzwy2oDH8V7zUJOktuLCPQloydGClJzxkNnELuwtZoY3zz0CwXEmENIFkUY07V1tqpLBm7dXNZduTmRrddetS3-DXNOfBeWU7P6Lz82Whs94mhJxKQbWRH8465lGUXUeBwBOcYxLpstdF0FAq8VHcGQ-VrcgOQ_7q4HkfhbOu9JvtiiTQfVgmCh4dIaIffPGbcqskDmH1sj_ANuoIXNxARC7KkmlJ_9Exnv4GlNxR7TtPoGc0qkgfsJYMNmbf2B35jdrsKmBxDUyo);
+    background-size: cover;
+    background-position: center
+    }</style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex items-center justify-center relative overflow-hidden font-body-base" data-alt="A dark, industrial control room interface. The scene is illuminated by glowing neon green accents against matte black panels. Abstract digital routing maps are visible in the blurred background. The mood is high-tension, precise, and technological. The aesthetic is HUD-like, resembling heavy machinery software with sharp geometric lines and high contrast.">
+<!-- Gameplay Background Context Overlay -->
+<div class="absolute inset-0 bg-surface/80 mix-blend-multiply z-0"></div>
+<div class="scanline"></div>
+<!-- Main Settings Modal -->
+<main class="glass-panel w-full max-w-4xl mx-margin-mobile md:mx-margin-desktop rounded z-10 relative flex flex-col md:flex-row shadow-[0_0_50px_rgba(0,0,0,0.8)] border border-outline-variant overflow-hidden">
+<!-- Left Column: Controls & Toggles -->
+<section class="flex-1 p-gutter md:p-8 flex flex-col gap-8 border-b md:border-b-0 md:border-r border-outline-variant">
+<header class="mb-4">
+<h1 class="font-display-lg-mobile md:font-display-lg text-primary-fixed-dim uppercase tracking-tighter shadow-primary-fixed-dim drop-shadow-[0_0_8px_rgba(171,214,0,0.3)]">
+                    System Parameters
+                </h1>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">CONFIGURE CONTROL ROOM HUD</p>
+</header>
+<div class="space-y-8">
+<!-- Sliders -->
+<div class="space-y-6">
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-caps text-label-caps text-on-surface tracking-widest">SIGNAL SPEED</label>
+<span class="font-stats-num text-stats-num text-primary-fixed-dim" id="speed-val">1.0x</span>
+</div>
+<input max="2.0" min="0.5" oninput="document.getElementById('speed-val').innerText = this.value + 'x'" step="0.1" type="range" value="1.0"/>
+</div>
+<div>
+<div class="flex justify-between items-center mb-2">
+<label class="font-label-caps text-label-caps text-on-surface tracking-widest">DIFFICULTY MULTIPLIER</label>
+<span class="font-stats-num text-stats-num text-secondary-fixed-dim" id="diff-val">NORMAL</span>
+</div>
+<input max="3" min="1" oninput="updateDifficulty(this.value)" step="1" type="range" value="2"/>
+</div>
+</div>
+<!-- Toggles -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 border border-surface-container-high rounded flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+                            SFX
+                        </label>
+<input checked="" class="industrial-toggle" type="checkbox"/>
+</div>
+<div class="bg-surface-container-low p-4 border border-surface-container-high rounded flex justify-between items-center">
+<label class="font-label-caps text-label-caps text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" style="font-variation-settings: 'FILL' 1;">music_note</span>
+                            MUSIC
+                        </label>
+<input checked="" class="industrial-toggle" type="checkbox"/>
+</div>
+</div>
+<!-- Dropdown -->
+<div class="bg-surface-container-low p-4 border border-surface-container-high rounded">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">CONTROL SCHEME</label>
+<div class="relative">
+<select class="w-full bg-surface text-on-surface font-body-base text-body-base border border-outline-variant p-3 appearance-none focus:outline-none focus:border-primary-fixed-dim focus:ring-1 focus:ring-primary-fixed-dim transition-colors rounded-none">
+<option>Mouse &amp; Keyboard (Precision)</option>
+<option>Controller (Gamepad)</option>
+<option>Touch (Tablet Mode)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: How to Play & Actions -->
+<section class="w-full md:w-80 bg-surface-container-lowest/50 p-gutter md:p-8 flex flex-col justify-between">
+<!-- How to Play -->
+<div class="mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface border-b border-surface-container-high pb-2 mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed-dim">help_center</span>
+                    HOW TO PLAY
+                </h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="font-stats-num text-stats-num text-surface-variant leading-none mt-1">01</span>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">Click junctions to switch tracks and alter routing.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="font-stats-num text-stats-num text-surface-variant leading-none mt-1">02</span>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">Route incoming pulses to matching designated signals.</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="font-stats-num text-stats-num text-error leading-none mt-1">03</span>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">Avoid collisions at all costs. Maintain sector integrity.</p>
+</li>
+</ul>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-3 mt-auto">
+<button class="w-full bg-surface-container-high border border-outline-variant text-on-surface font-label-caps text-label-caps py-4 px-6 hover:bg-surface-container-highest hover:text-primary-fixed-dim transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+                    RESET PREFERENCES
+                </button>
+<button class="w-full bg-surface-container-high border border-surface-container-high text-primary-fixed-dim font-label-caps text-label-caps py-4 px-6 hover:border-primary-fixed-dim hover:shadow-[0_0_15px_rgba(171,214,0,0.2)] active:translate-y-px transition-all flex items-center justify-center gap-2 group">
+<span class="material-symbols-outlined group-hover:animate-pulse">save</span>
+                    SAVE &amp; RESUME
+                </button>
+</div>
+</section>
+</main>
+<script>
+        function updateDifficulty(val) {
+            const label = document.getElementById('diff-val');
+            if (val == 1) {
+                label.innerText = 'EASY';
+                label.className = 'font-stats-num text-stats-num text-on-surface-variant';
+            } else if (val == 2) {
+                label.innerText = 'NORMAL';
+                label.className = 'font-stats-num text-stats-num text-secondary-fixed-dim';
+            } else {
+                label.innerText = 'HARD';
+                label.className = 'font-stats-num text-stats-num text-error';
+            }
+        }
+    </script>
+</body></html>
