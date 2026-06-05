@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T11:45:12.654Z",
+  "generatedAt": "2026-06-05T11:45:34.025Z",
   "screenCount": 3,
   "screens": {
     "6b008f0bacc843a5928e0da697025af6": {
@@ -540,7 +540,7 @@
       "layoutHints": {},
       "behaviorContract": [],
       "tabBar": [],
-      "title": "RailSignal Lite Logo"
+      "title": "bd92b37c97694515beba782b2dcc924a"
     }
   }
 }

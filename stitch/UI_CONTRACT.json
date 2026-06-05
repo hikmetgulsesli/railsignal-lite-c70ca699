@@ -1,0 +1,153 @@
+[
+  {
+    "screenId": "6b008f0bacc843a5928e0da697025af6",
+    "screenTitle": "Gameplay - RailSignal Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 239
+      },
+      {
+        "type": "button",
+        "label": "START GAME",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 247
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "pause",
+        "line": 159
+      },
+      {
+        "type": "button",
+        "label": "settings",
+        "line": 239
+      },
+      {
+        "type": "button",
+        "label": "START GAME",
+        "line": 243
+      },
+      {
+        "type": "button",
+        "label": "RESTART",
+        "line": 247
+      }
+    ],
+    "inputs": [],
+    "hardcodedData": [],
+    "totalInteractive": 4,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  },
+  {
+    "screenId": "96a8ed1270af473bb413bd6ced8602ed",
+    "screenTitle": "Game Settings - RailSignal Lite",
+    "deviceType": "DESKTOP",
+    "elements": [
+      {
+        "type": "button",
+        "label": "RESET PREFERENCES",
+        "line": 266
+      },
+      {
+        "type": "button",
+        "label": "&amp; RESUME",
+        "line": 270
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 200
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 207
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 217
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 224
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 231
+      }
+    ],
+    "navigation": [],
+    "buttons": [
+      {
+        "type": "button",
+        "label": "RESET PREFERENCES",
+        "line": 266
+      },
+      {
+        "type": "button",
+        "label": "&amp; RESUME",
+        "line": 270
+      }
+    ],
+    "inputs": [
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 200
+      },
+      {
+        "type": "input",
+        "label": "range",
+        "inputType": "range",
+        "line": 207
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 217
+      },
+      {
+        "type": "input",
+        "label": "checkbox",
+        "inputType": "checkbox",
+        "line": 224
+      },
+      {
+        "type": "input",
+        "label": "select",
+        "inputType": "select",
+        "line": 231
+      }
+    ],
+    "hardcodedData": [],
+    "totalInteractive": 7,
+    "requiresRouter": false,
+    "requiresDragDrop": false
+  }
+]
