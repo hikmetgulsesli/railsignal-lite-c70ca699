@@ -19,7 +19,8 @@ export interface GameplayRailsignalLiteProps {
 }
 
 export function GameplayRailsignalLite({ actions, runtime }: GameplayRailsignalLiteProps) {
-  void runtime;
+  const score = runtime?.score ?? 0;
+  const paused = runtime?.paused ?? false;
   return (
     <>
       {/* TopAppBar (Based on Shared Components JSON) */}
@@ -33,12 +34,12 @@ export function GameplayRailsignalLite({ actions, runtime }: GameplayRailsignalL
       <div className="hidden md:flex items-center gap-8 bg-surface-container-high px-6 py-2 rounded border border-outline-variant">
       <div className="flex flex-col items-center">
       <span className="font-label-caps text-label-caps text-on-surface-variant">SCORE</span>
-      <span className="font-stats-num text-stats-num text-on-background">1,240</span>
+      <span className="font-stats-num text-stats-num text-on-background">{score.toLocaleString()}</span>
       </div>
       <div className="w-px h-8 bg-outline-variant"></div>
       <div className="flex flex-col items-center">
       <span className="font-label-caps text-label-caps text-on-surface-variant">LEVEL</span>
-      <span className="font-stats-num text-stats-num text-primary-fixed-dim">04</span>
+      <span className="font-stats-num text-stats-num text-primary-fixed-dim">01</span>
       </div>
       </div>
       {/* Trailing Action */}
@@ -84,7 +85,7 @@ export function GameplayRailsignalLite({ actions, runtime }: GameplayRailsignalL
       <h3 className="font-label-caps text-label-caps text-on-surface-variant mb-2">SYSTEM STATUS</h3>
       <div className="flex items-center gap-3">
       <div className="w-3 h-3 rounded-full bg-primary-fixed-dim shadow-[0_0_8px_#abd600]"></div>
-      <span className="font-stats-num text-stats-num text-primary-fixed-dim">ACTIVE</span>
+      <span className="font-stats-num text-stats-num text-primary-fixed-dim">{paused ? 'PAUSED' : 'ACTIVE'}</span>
       </div>
       </div>
       {/* Next Pulse Timer */}
