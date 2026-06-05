@@ -21,6 +21,7 @@ export interface GameplayRailsignalLiteProps {
 export function GameplayRailsignalLite({ actions, runtime }: GameplayRailsignalLiteProps) {
   const score = runtime?.score ?? 0;
   const paused = runtime?.paused ?? false;
+  const level = (runtime as any)?.level ?? 1;
   return (
     <>
       {/* TopAppBar (Based on Shared Components JSON) */}
@@ -39,7 +40,7 @@ export function GameplayRailsignalLite({ actions, runtime }: GameplayRailsignalL
       <div className="w-px h-8 bg-outline-variant"></div>
       <div className="flex flex-col items-center">
       <span className="font-label-caps text-label-caps text-on-surface-variant">LEVEL</span>
-      <span className="font-stats-num text-stats-num text-primary-fixed-dim">01</span>
+      <span className="font-stats-num text-stats-num text-primary-fixed-dim">{String(level).padStart(2, '0')}</span>
       </div>
       </div>
       {/* Trailing Action */}
