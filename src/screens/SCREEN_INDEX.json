@@ -1,0 +1,78 @@
+[
+  {
+    "screenId": "6b008f0bacc843a5928e0da697025af6",
+    "title": "Gameplay - RailSignal Lite",
+    "componentName": "GameplayRailsignalLite",
+    "file": "src/screens/GameplayRailsignalLite.tsx",
+    "buttons": 7,
+    "inputs": 0,
+    "links": 0,
+    "actions": [
+      {
+        "id": "pause-1",
+        "kind": "button",
+        "label": "Pause",
+        "index": 0
+      },
+      {
+        "id": "button-2-2",
+        "kind": "button",
+        "label": "Button 2",
+        "index": 1
+      },
+      {
+        "id": "button-3-3",
+        "kind": "button",
+        "label": "Button 3",
+        "index": 2
+      },
+      {
+        "id": "button-4-4",
+        "kind": "button",
+        "label": "Button 4",
+        "index": 3
+      },
+      {
+        "id": "settings-5",
+        "kind": "button",
+        "label": "SETTINGS",
+        "index": 4
+      },
+      {
+        "id": "start-game-6",
+        "kind": "button",
+        "label": "START GAME",
+        "index": 5
+      },
+      {
+        "id": "restart-7",
+        "kind": "button",
+        "label": "RESTART",
+        "index": 6
+      }
+    ]
+  },
+  {
+    "screenId": "96a8ed1270af473bb413bd6ced8602ed",
+    "title": "Game Settings - RailSignal Lite",
+    "componentName": "GameSettingsRailsignalLite",
+    "file": "src/screens/GameSettingsRailsignalLite.tsx",
+    "buttons": 2,
+    "inputs": 4,
+    "links": 0,
+    "actions": [
+      {
+        "id": "reset-preferences-1",
+        "kind": "button",
+        "label": "RESET PREFERENCES",
+        "index": 0
+      },
+      {
+        "id": "save-and-resume-2",
+        "kind": "button",
+        "label": "SAVE and RESUME",
+        "index": 1
+      }
+    ]
+  }
+]
